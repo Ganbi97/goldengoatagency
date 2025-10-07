@@ -1,0 +1,99 @@
+:root {
+  --accent: #00c853;
+  --trans-duration: 0.3s;
+}
+
+/* Hero background */
+.hero-bg {
+  background-image: url('src/header.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+/* WhatsApp CTA */
+.btn-whatsapp {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(0,200,83,0.12), rgba(0,200,83,0.08));
+  color: var(--accent);
+  border: 1px solid rgba(0,200,83,0.16);
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform var(--trans-duration), box-shadow var(--trans-duration);
+}
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 8px rgba(0,200,83,0.3);
+}
+
+/* Sticky Buttons */
+.sticky-btn {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #9ca3af;
+  padding: 8px 12px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.sticky-btn:hover {
+  color: #fff;
+  transform: translateX(4px);
+}
+.sticky-btn.active {
+  color: var(--accent);
+  border-color: rgba(0,200,83,0.4);
+  background: rgba(0,200,83,0.08);
+}
+
+/* Animaciones Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Info cards (Meta sección) */
+.info-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.4s ease;
+}
+.info-card:hover {
+  background: rgba(255,255,255,0.07);
+  transform: translateY(-4px);
+}
+.info-card h3 {
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Plataformas imágenes */
+.platform-img {
+  border-radius: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.85;
+}
+.platform-img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Navbar scroll */
+.scrolled {
+  background-color: rgba(10, 12, 15, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
